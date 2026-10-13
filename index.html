@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vores lille kærlighedshistorie ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="top-nav" aria-label="Hovedmenu"><a class="nav-link active" href="index.html" aria-current="page">Vores minder</a><a class="nav-link upload-link" href="upload.html">＋ Tilføj et minde</a></nav>
+    <header class="hero">
+      <div class="bow">୨୧</div>
+      <p class="eyebrow">Et lille sted kun for os</p>
+      <h1>Vores lille <em>kærlighedshistorie</em></h1>
+      <p class="intro">Vores minder og vores lille verden samlet ét sted ♡</p>
+      <div class="hearts" aria-hidden="true"><svg class="heart-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg> ˚₊‧ <svg class="heart-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg> ‧₊˚ <svg class="heart-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg></div>
+    </header>
+
+    <section class="our-people" aria-label="Columbus og Julia">
+      <p class="eyebrow">Vores lille hold</p>
+      <div class="people-strip">
+        <div class="person-mini"><img src="images/columbus.jpg" alt="Portræt af Columbus" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="mini-initial" hidden>C</span><span>Columbus</span></div>
+        <span class="couple-heart" aria-hidden="true"><svg class="heart-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg></span>
+        <div class="person-mini"><img src="images/julia.jpg" alt="Portræt af Julia" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="mini-initial" hidden>J</span><span>Julia</span></div>
+      </div>
+    </section>
+    <section class="gallery-section">
+      <div class="gallery-heading">
+        <div>
+          <p class="eyebrow">Vores fælles scrapbog</p>
+          <h2>Små øjeblikke, for altid</h2>
+        </div>
+        <span id="count" class="count">0 minder</span>
+      </div>
+      <div id="gallery" class="gallery"></div>
+      <div id="empty" class="empty">
+        <div class="empty-heart"><svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg></div>
+        <h3>Her begynder jeres historie</h3>
+        <p>Tilføj jeres første billede, så dukker det op her for jer begge.</p>
+      </div>
+    </section>
+
+    <footer>Lavet med kærlighed til vores lille verden <span>♡</span></footer>
+  </main>
+
+  <template id="memory-template">
+    <article class="memory">
+      <div class="polaroid">
+        <img class="memory-photo" alt="" loading="lazy">
+        <span class="photo-heart" aria-hidden="true"><svg class="heart-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg></span>
+      </div>
+      <div class="memory-info">
+        <p class="date"></p>
+        <h3 class="title"></h3>
+        <p class="place"></p>
+        <p class="story"></p>
+        <p class="uploader"></p>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

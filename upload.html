@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tilføj et minde ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="top-nav" aria-label="Hovedmenu"><a class="nav-link" href="index.html">Vores minder</a><a class="nav-link upload-link active" href="upload.html" aria-current="page">＋ Tilføj et minde</a></nav>
+    <header class="hero">
+      <div class="bow">୨୧</div>
+      <p class="eyebrow">Et lille sted kun for os</p>
+      <h1>Tilføj et <em>lille minde</em></h1>
+      <p class="intro">Gem et øjeblik, du aldrig vil glemme ♡</p>
+    </header>
+    <section class="who-section">
+      <p class="eyebrow">Hvem tilføjer et minde?</p>
+      <h2>Vælg dig selv</h2>
+      <div class="people">
+        <button class="person selected" type="button" data-person="Columbus" aria-pressed="true"><span class="portrait"><img src="images/columbus.jpg" alt="Columbus" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="initials" hidden>C</span><span class="tiny-heart"><svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg></span></span><span class="person-name">Columbus</span><span class="person-hint">Det er mig ♡</span></button>
+        <button class="person" type="button" data-person="Julia" aria-pressed="false"><span class="portrait"><img src="images/julia.jpg" alt="Julia" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="initials" hidden>J</span><span class="tiny-heart"><svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg></span></span><span class="person-name">Julia</span><span class="person-hint">Det er mig ♡</span></button>
+      </div>
+      <p class="selected-note" id="selected-note">Du tilføjer minder som Columbus ♡</p>
+    </section>
+    <section class="upload-card">
+      <div class="upload-title"><span class="sticker"><svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg></span><div><h2>Tilføj et lille minde</h2><p>Gem de øjeblikke, I aldrig vil glemme.</p></div></div>
+      <form id="memory-form">
+        <label class="field">Billede<input id="photo" type="file" accept="image/*" required></label>
+        <label class="field">Titel<input id="title" type="text" maxlength="100" placeholder="Vores perfekte dag" required></label>
+        <div class="two"><label class="field">Dato<input id="memory-date" type="date"></label><label class="field">Sted<input id="place" type="text" maxlength="120" placeholder="Stranden, derhjemme …"></label></div>
+        <label class="field">Vores lille historie<textarea id="story" rows="3" maxlength="1200" placeholder="Hvad lavede vi? Hvad gjorde dagen særlig?"></textarea></label>
+        <div class="form-bottom"><p id="status" role="status" aria-live="polite"></p><button class="primary" id="save-button" type="submit">Gem i vores minder <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-9-5.7-9-12a5.2 5.2 0 0 1 9-3.5A5.2 5.2 0 0 1 21 9c0 6.3-9 12-9 12Z"/></svg></button></div>
+      </form>
+    </section>
+    <footer>Lavet med kærlighed til vores lille verden <span>♡</span></footer>
+  </main>
+</body>
+</html>
